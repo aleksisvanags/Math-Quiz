@@ -2,7 +2,6 @@
 # Aleksis Vanags
 # 02/11/2021
 
-import ast
 from random import randint as r, choice as c
 
 operators = ["+", "-", "*", "/"]
@@ -44,7 +43,7 @@ def createQuestion(difficulty):
         num2 = r(1, 100)
         num1 = num2 * r(1, 9)
         question = str(multiplier * num1) + " " + operator + " " + str(multiplier * num2)
-    answer = str(ast.literal_eval(question))
+    answer = str(eval(question))
     return [question, answer]
 
 
