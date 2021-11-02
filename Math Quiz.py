@@ -37,13 +37,22 @@ def createQuestion(difficulty):
     elif difficulty == "hard":
         multiplier = 7
     operator = c(operators)
-    if operator != "/":
-        question = str(multiplier * r(0, 100)) + " " + operator + " " + str(multiplier * r(1, 100))
+    num1 = multiplier * r(1, 100)
+    num2 = multiplier * r(1, 100)
+    if operator == "+":
+        answer = num1 + num2
+        question = str(num1) + " " + operator + " " + str(num2)
+    elif operator == "-":
+        answer = num1 - num2
+        question = str(num1) + " " + operator + " " + str(num2)
+    elif operator == "*":
+        answer = num1 * num2
+        question = str(num1) + " " + operator + " " + str(num2)
     else:
         num2 = r(1, 100)
         num1 = num2 * r(1, 9)
+        answer = num1 / num2
         question = str(multiplier * num1) + " " + operator + " " + str(multiplier * num2)
-    answer = str(eval(question))
     return [question, answer]
 
 
