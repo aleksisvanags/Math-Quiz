@@ -49,7 +49,7 @@ def createQuestion(difficulty):
         answer = num1 * num2
         question = str(num1) + " " + operator + " " + str(num2)
     else:
-        num2 = r(1, 100)
+        num2 = r(1, 10)
         num1 = num2 * r(1, 9)
         answer = num1 / num2
         question = str(multiplier * num1) + " " + operator + " " + str(multiplier * num2)
