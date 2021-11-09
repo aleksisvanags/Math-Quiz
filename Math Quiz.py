@@ -24,7 +24,7 @@ def main():
     with open(f"scores{difficulty}.txt", "a") as file:
         file.write("Username: " + name + "# Score: " + str(score) + "/20 " + str((score / 20) * 100) + "%\n")
     again = input("Do you want to see the top 10?\n").lower()
-    if again == "y":
+    if again == "yes":
         displayTopTen(difficulty)
 
 
