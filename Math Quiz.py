@@ -33,12 +33,12 @@ def createQuestion(difficulty):
     if difficulty == "easy":
         multiplier = 1
     elif difficulty == "medium":
-        multiplier = 3
-    elif difficulty == "hard":
         multiplier = 7
+    elif difficulty == "hard":
+        multiplier = 13
     operator = c(operators)
-    num1 = multiplier * r(1, 100)
-    num2 = multiplier * r(1, 100)
+    num1 = multiplier * r(1, 10)
+    num2 = multiplier * r(1, 10)
     if operator == "+":
         answer = num1 + num2
         question = str(num1) + " " + operator + " " + str(num2)
